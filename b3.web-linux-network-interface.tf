@@ -8,8 +8,9 @@ resource "azurerm_network_interface" "web_linux_nic" {
   #what nic card required
   ##3nic 
   ip_configuration {
-    name = "web-linux-ip-1"
+    name = "web-linux-ip-1-${each.key}"
     subnet_id = azurerm_subnet.websubnet.id 
     private_ip_address_allocation =   "Dynamic"
+    #public_ip_address_id = azurerm_public_ip.web_linux_publicip.id 
   }
 }

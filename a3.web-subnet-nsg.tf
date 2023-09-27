@@ -12,7 +12,7 @@ resource "azurerm_subnet" "websubnet" {
 
 #create an nsg
 resource "azurerm_network_security_group" "web_subnet_nsg" {
-  depends_on = [ azurerm_network_security_rule.web_nsg_rule ]
+  #depends_on = [ azurerm_network_security_rule.web_nsg_rule ]
   name                = "${var.business_unit}-${var.environment}-${var.resource_group_name}-nsg"
   ##3once it create the vnet it need to attached inside my rg
   location            = azurerm_resource_group.myrg.location

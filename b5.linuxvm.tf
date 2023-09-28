@@ -1,3 +1,4 @@
+
 resource "azurerm_linux_virtual_machine" "web_inuxvm" {
   for_each = var.web_linuxvm_instance_count
   name                = "${var.business_unit}-${var.environment}-${var.resource_group_name}-${each.key}"

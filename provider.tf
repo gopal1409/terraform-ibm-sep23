@@ -5,6 +5,14 @@ terraform {
       #version = "~> 5.0"
     }
   }
+  backend "azurerm" {
+    ###storage resource group name
+    resource_group_name = "terraform-storage-rg"
+    storage_account_name = "terraformstoragego"
+    container_name = "tfstate"
+    ##key is like when it create a tfstate file it is going to store the same with this name
+    key = "web.tfstate"
+  }
 }
 
 # Configure the AWS Provider

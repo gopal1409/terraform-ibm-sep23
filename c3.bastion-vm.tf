@@ -1,4 +1,4 @@
-
+/*
 # Resource-1: Create Public IP Address
 resource "azurerm_public_ip" "bastion_host_publicip" {
   name                = "bastion-host-publicip"
@@ -45,4 +45,4 @@ resource "azurerm_linux_virtual_machine" "bastion_host_linuxvm" {
     sku       = "20_04-lts"
     version   = "latest"
   }
-}
+}*/

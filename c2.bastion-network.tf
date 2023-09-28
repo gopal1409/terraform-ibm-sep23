@@ -1,3 +1,4 @@
+/*
 # Resource-1: Create Bastion / Management Subnet
 resource "azurerm_subnet" "bastionsubnet" {
   name                 = "bastion-subnet1"  
@@ -44,3 +45,4 @@ resource "azurerm_network_security_rule" "bastion_nsg_rule_inbound" {
   network_security_group_name = azurerm_network_security_group.bastion_subnet_nsg.name
 }
 
+*/
